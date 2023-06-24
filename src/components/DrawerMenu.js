@@ -10,6 +10,7 @@ import {
 import './DrawerMenu.css'
 import { PhoneIcon, HamburgerIcon } from '@chakra-ui/icons'
 import { Button, useDisclosure } from "@chakra-ui/react"
+import { CloseButton } from '@chakra-ui/react'
 
 export default function PlacementExample() {
     const { isOpen, onOpen, onClose } = useDisclosure()
@@ -25,7 +26,7 @@ export default function PlacementExample() {
         <Drawer placement="left" onClose={onClose} isOpen={isOpen}>
           <DrawerOverlay />
           <DrawerContent backgroundColor={'black'}>
-            <DrawerHeader borderBottomWidth='1px' textAlign={'center'}color= "white" fontSize={'30px'}>Hello</DrawerHeader>
+            <DrawerHeader borderBottomWidth='1px' textAlign={'center'}color= "white" fontSize={'30px'}> <CloseButton onClick={onClose} />Hello</DrawerHeader>
             <DrawerBody className='drawerbody'>
              <Button className='drawerbody-button' bg="black"  color= "white" _hover={{ bg: "red.500" }}>Home</Button>
              <Button className='drawerbody-button' bg="black"color= "white" _hover={{ bg: "red.500", color: "white" }}>About Me</Button>
