@@ -1,0 +1,24 @@
+.draw{
+ width: 10vh;
+ /* margin-top: 1vh; */
+}
+.draw :hover{
+    cursor: pointer;
+    
+}
+.drawerbody{
+    display: flex;
+    flex-direction: column;
+
+}
+.drawerbody-button{
+   padding: 5vh;
+   
+   width: 40vh;
+    
+}
+.drawerbody-button:hover{
+    background-color: #f2f2f2;
+  
+}
+
