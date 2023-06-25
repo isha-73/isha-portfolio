@@ -7,7 +7,7 @@ import {
   DrawerContent,
   DrawerCloseButton,
 } from '@chakra-ui/react'
-import './css/DrawerMenu.css'
+import '../css/DrawerMenu.css'
 import { HamburgerIcon, SunIcon } from '@chakra-ui/icons'
 import { Button, useDisclosure } from "@chakra-ui/react"
 import { CloseButton } from '@chakra-ui/react'
