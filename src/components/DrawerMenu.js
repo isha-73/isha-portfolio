@@ -20,11 +20,12 @@ export default function PlacementExample() {
 
   return (
     <>
+    <Box>
       <Flex>
-        <Box>
+        <Box position={'fixed'} zIndex={1} >
 
-          <Button className='draw' backgroundColor='#282c34' height={'10vh'} borderRadius={'0'} onClick={onOpen} variant="unstyled">
-            <HamburgerIcon color="red.500" boxSize={6} />
+          <Button className='draw' backgroundColor='#282c34' height={'10vh'}  onClick={onOpen}  variant="unstyled" borderRadius={'20px'} >
+            <HamburgerIcon color="red.500" boxSize={6}  />
           </Button>
 
           <Drawer placement="left" onClose={onClose} isOpen={isOpen}>
@@ -45,11 +46,11 @@ export default function PlacementExample() {
 
         </Box>
         <Spacer />
-        <Box p={4} color={'red.500'}>
-          <SunIcon />
+        <Box  color={'red.500'} paddingTop={'4vh'} paddingRight={'5vh'}>
+          <SunIcon position={'fixed'}boxSize={6}  zIndex={'1'} />
         </Box>
       </Flex>
-
+      </Box>
     </>
   )
 }
