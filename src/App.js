@@ -1,6 +1,7 @@
 import { ChakraProvider, Box } from '@chakra-ui/react';
 import DrawerMenu from './components/DrawerMenu';
 import Info from './components/Info.js';
+import Footer from './components/Footer.js';
 
 function App() {
   return (
@@ -26,9 +27,11 @@ function App() {
         >
           {/* Add your content here */}
         </Box>
-        <footer className="App-footer" p={4}>
-          <p>Footer</p>
-        </footer>
+        <Box>
+          <Footer />
+        </Box>
+
+
       </Box>
     </ChakraProvider>
   );

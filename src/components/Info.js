@@ -60,29 +60,25 @@ export default function Info() {
                             </Box>
 
                             <Stack flex="1" textAlign="center">
-                                <Heading as="h1" size="3xl" noOfLines={1}>
+                                <Heading as="h1" size="3xl" noOfLines={1} fontFamily={"candara"}>
                                     {info.name}
                                 </Heading>
-                                <Text py="1" fontSize="lg">
+                                <Text py="1" fontSize="lg" fontFamily={"calibri"}>
                                     {info.status}
                                 </Text>
-                                <Text fontSize="lg">{info.enthu}</Text>
+                                <Text fontSize="lg" fontFamily={"calibri"}>{info.enthu}</Text>
                                 <hr />
-                                <List spacing={1} fontSize="lg" textAlign="left">
-                                    <ListItem>
-                                        <ListIcon as={MdCheckCircle} color="green.500" />
+                                <List spacing={1} fontSize="lg" p={'10'} textAlign="left" fontFamily={"cursive"}>
+                                    <ListItem>&#x1F4DA;
                                         {info.like.line1}
                                     </ListItem>
-                                    <ListItem>
-                                        <ListIcon as={MdCheckCircle} color="green.500" />
+                                    <ListItem> &#x1F333;
                                         {info.like.line2}
                                     </ListItem>
-                                    <ListItem>
-                                        <ListIcon as={MdCheckCircle} color="green.500" />
+                                    <ListItem>&#x1F682;
                                         {info.like.line3}
                                     </ListItem>
-                                    <ListItem>
-                                        <ListIcon as={MdCheckCircle} color="green.500" />
+                                    <ListItem>&#x1F60A;
                                         {info.like.line4}
                                     </ListItem>
                                 </List>

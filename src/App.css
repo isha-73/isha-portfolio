@@ -30,6 +30,7 @@
 
 .App-footer {
   height: 20px;
+  min-width: 100%;
   margin-bottom: 0;
   color: aliceblue;
 

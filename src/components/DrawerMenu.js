@@ -19,10 +19,8 @@ export default function PlacementExample() {
   const [isRotated, setIsRotated] = useState(false);
   const [isIconVisible, setIsIconVisible] = useState(true);
 
+  const style = {}
 
-  const handleHover = () => {
-    setIsRotated(!isRotated);
-  };
   const handleCombinedClick = () => {
     onOpen();
     setIsIconVisible(false);
@@ -35,7 +33,7 @@ export default function PlacementExample() {
 
   return (
     <>
-      <Box>
+      <Box >
         <Flex>
           <Box position={'fixed'} zIndex={1} >
 
@@ -49,23 +47,22 @@ export default function PlacementExample() {
                 transform: isRotated ? 'rotate(180deg)' : 'rotate(0deg)',
                 transition: 'transform 0.3s ease-in-out',
               }}
-              onMouseEnter={handleHover}
-              onMouseLeave={handleHover}
+
             >
               {isIconVisible && <HamburgerIcon color="teal.500" boxSize={8} />}
             </Button>
 
             <Drawer placement="left" onClose={closeDrawer} isOpen={isOpen} >
               <DrawerOverlay />
-              <DrawerContent bg="transparent" >
-                <DrawerHeader borderBottomWidth='1px' textAlign={'center'} color="white" fontSize={'30px'}> <CloseButton onClick={closeDrawer} />Hello</DrawerHeader>
-                <DrawerBody className='drawerbody'>
+              <DrawerContent bg="transparent"  >
+                <DrawerHeader borderBottomWidth='1px' color="white" textAlign={"center"} width="170px" > <CloseButton onClick={closeDrawer} />Hello</DrawerHeader>
+                <DrawerBody className='drawerbody' width="170px" >
                   <Flex direction={'column'}>
-                    <Button className='drawerbody-button' height={'16'} variant={"unstyled"} color="white" _hover={{ backgroundImage: "linear-gradient(to right, teal.400, black)" }}>Home</Button>
-                    <Button className='drawerbody-button' height={'16'} variant={"unstyled"} color="white" _hover={{ backgroundImage: "linear-gradient(to right, teal.400, black)" }}>About Me</Button>
-                    <Button className='drawerbody-button' height={'16'} variant={"unstyled"} color="white" _hover={{ backgroundImage: "linear-gradient(to right, teal.400, black)" }}>Blogs</Button>
-                    <Button className='drawerbody-button' height={'16'} variant={"unstyled"} color="white" _hover={{ backgroundImage: "linear-gradient(to right, teal.400, black)" }}>Projects</Button>
-                    <Button className='drawerbody-button' height={'16'} variant={"unstyled"} color="white" _hover={{ backgroundImage: "linear-gradient(to right, teal.400, black)" }}>Timeline</Button>
+                    <Button className='drawerbody-button' height={'16'} variant={"unstyled"} color="white"  >Home</Button>
+                    <Button className='drawerbody-button' height={'16'} variant={"unstyled"} color="white"  >About Me</Button>
+                    <Button className='drawerbody-button' height={'16'} variant={"unstyled"} color="white"  >Projects</Button>
+                    <Button className='drawerbody-button' height={'16'} variant={"unstyled"} color="white"  >Blogs</Button>
+                    {/* <Button className='drawerbody-button' height={'16'} variant={"unstyled"} color="white"  >Timeline</Button> */}
                   </Flex>
                 </DrawerBody>
               </DrawerContent>
