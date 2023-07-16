@@ -32,57 +32,63 @@ export default function Info() {
     }
     return (
         <>
-            <Container maxW="container.xl" className='info-container' padding={'5vh'} >
-
+            <Container maxW="container.xl" padding="5vh">
                 <Center>
-
-                    <Card
-                        direction={{ base: 'column', sm: 'row' }}
-                        overflow='hidden'
-                        variant='outline'
-                        width={{ base: '100%', sm: '80%' }}
+                    <Box
+                        bgGradient="linear(to bottom, teal.800, black)"
+                        color="white"
+                        borderRadius="md"
+                        overflow="hidden"
+                        boxShadow="xl"
+                        width={{ base: '100%', sm: '90%' }}
                     >
-                        <Image
-                            objectFit='cover'
-                            maxW={{ base: '100%', sm: '30%' }}
-                            src={pic}
-                            alt='My pic'
-                        />
+                        <Stack
+                            direction={{ base: 'column', sm: 'row' }}
+                            alignItems="center"
+                            py={{ base: '6', md: '8' }}
+                            px={{ base: '4', md: '6' }}
+                            spacing={{ base: '4', md: '8' }}
+                        >
+                            <Box maxW={{ base: '100%', sm: '30%' }}>
+                                <Image
+                                    objectFit="cover"
+                                    src={pic}
+                                    alt="My pic"
+                                    borderRadius="md"
+                                    boxShadow="md"
+                                />
+                            </Box>
 
-                        <Stack>
-                            <CardBody py='5vh'>
-                                <Heading as='h1' size='3xl' noOfLines={1}>{info.name}</Heading>
-
-                                <Text py='1' fontSize='md'>
+                            <Stack flex="1" textAlign="center">
+                                <Heading as="h1" size="3xl" noOfLines={1}>
+                                    {info.name}
+                                </Heading>
+                                <Text py="1" fontSize="lg">
                                     {info.status}
                                 </Text>
-                                <Box><Text fontSize={'2.6vh'}>{info.enthu}</Text> </Box>
-                            </CardBody>
-                            <hr />
-                            <CardFooter marginTop="-5" display={'flex'}  flexDirection={'column'}>
-                               
-                                <List spacing={1} fontSize={'2.8vh'} textAlign={'left'}>
+                                <Text fontSize="lg">{info.enthu}</Text>
+                                <hr />
+                                <List spacing={1} fontSize="lg" textAlign="left">
                                     <ListItem>
-                                        <ListIcon as={MdCheckCircle} color='green.500' />
+                                        <ListIcon as={MdCheckCircle} color="green.500" />
                                         {info.like.line1}
                                     </ListItem>
                                     <ListItem>
-                                        <ListIcon as={MdCheckCircle} color='green.500' />
+                                        <ListIcon as={MdCheckCircle} color="green.500" />
                                         {info.like.line2}
                                     </ListItem>
                                     <ListItem>
-                                        <ListIcon as={MdCheckCircle} color='green.500' />
+                                        <ListIcon as={MdCheckCircle} color="green.500" />
                                         {info.like.line3}
                                     </ListItem>
                                     <ListItem>
-                                        <ListIcon as={MdCheckCircle} color='green.500' />
+                                        <ListIcon as={MdCheckCircle} color="green.500" />
                                         {info.like.line4}
                                     </ListItem>
-                                    {/* You can also use custom icons from react-icons */}
                                 </List>
-                            </CardFooter>
+                            </Stack>
                         </Stack>
-                    </Card>
+                    </Box>
                 </Center>
             </Container>
         </>
