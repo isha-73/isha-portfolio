@@ -21,13 +21,11 @@ function App() {
           <Info />
         </header>
         <Box
-
           className="App-body"
           textAlign="center"
-          display={"flex"}
-          justifyContent={"center"}
-          alignItems={"center"}
-          padding={'3'}
+          display={'flex'}
+          justifyContent={'center'}
+          alignItems={'center'}
         >
           {/* Add your content here */}
           <Body />
@@ -35,8 +33,6 @@ function App() {
         <Box>
           <Footer />
         </Box>
-
-
       </Box>
     </ChakraProvider>
   );
