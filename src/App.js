@@ -2,6 +2,7 @@ import { ChakraProvider, Box } from '@chakra-ui/react';
 import DrawerMenu from './components/DrawerMenu';
 import Info from './components/Info.js';
 import Footer from './components/Footer.js';
+import Body from './components/Body';
 
 function App() {
   return (
@@ -20,12 +21,16 @@ function App() {
           <Info />
         </header>
         <Box
-          flex="1"
+
           className="App-body"
           textAlign="center"
-
+          display={"flex"}
+          justifyContent={"center"}
+          alignItems={"center"}
+          padding={'3'}
         >
           {/* Add your content here */}
+          <Body />
         </Box>
         <Box>
           <Footer />
