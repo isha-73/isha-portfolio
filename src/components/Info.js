@@ -43,7 +43,7 @@ export default function Info() {
             <Stack
               direction={{ base: 'column', sm: 'row' }}
               alignItems="center"
-              py={{ base: '6', md: '8' }}
+              py={{ base: '6', md: '6' }}
               px={{ base: '4', md: '6' }}
               spacing={{ base: '4', md: '8' }}
             >
@@ -76,7 +76,7 @@ export default function Info() {
                 <List
                   spacing={1}
                   fontSize="lg"
-                  p={'10'}
+                  p={'4'}
                   textAlign="left"
                   fontFamily={'cursive'}
                 >
