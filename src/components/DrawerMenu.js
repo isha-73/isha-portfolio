@@ -13,6 +13,7 @@ import { Button, useDisclosure } from '@chakra-ui/react';
 import { CloseButton } from '@chakra-ui/react';
 import { Flex, Spacer, Box } from '@chakra-ui/react';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 export default function PlacementExample() {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -62,38 +63,48 @@ export default function PlacementExample() {
               </DrawerHeader>
               <DrawerBody className="drawerbody" width="170px">
                 <Flex direction={'column'}>
+
                   <Button
                     className="drawerbody-button"
                     height={'16'}
                     variant={'unstyled'}
                     color="white"
-                  >
-                    Home
+                  > <Link to='/'>
+                      Home
+                    </Link>
                   </Button>
+
                   <Button
                     className="drawerbody-button"
                     height={'16'}
                     variant={'unstyled'}
                     color="white"
-                  >
-                    About Me
+                  > <Link to='/about'>
+                      About Me
+                    </Link>
+
                   </Button>
+
                   <Button
                     className="drawerbody-button"
                     height={'16'}
                     variant={'unstyled'}
                     color="white"
-                  >
-                    Projects
+                  > <Link to="/projects">
+                      Projects
+                    </Link>
                   </Button>
+
                   <Button
                     className="drawerbody-button"
                     height={'16'}
                     variant={'unstyled'}
                     color="white"
-                  >
-                    Blogs
+                  ><Link to='/blogs'>
+                      Blogs
+                    </Link>
                   </Button>
+
                   {/* <Button className='drawerbody-button' height={'16'} variant={"unstyled"} color="white"  >Timeline</Button> */}
                 </Flex>
               </DrawerBody>

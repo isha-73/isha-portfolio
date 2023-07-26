@@ -9,13 +9,14 @@ export default function Home() {
     <>
       <Info />
       <Box
-        className="App-body"
+
         textAlign="center"
         display={'flex'}
         flexDirection={'column'}
         justifyContent={'center'}
         alignItems={'center'}
         width={'100%'}
+
       >
         <Body />
         <Footer />
