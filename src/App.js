@@ -6,6 +6,8 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Projects from './pages/Projects';
 import NotFound from './pages/NotFound';
+import Interest from './pages/Interest';
+import Blogs from './pages/Blogs';
 
 function App() {
   return (
@@ -20,14 +22,15 @@ function App() {
             <DrawerMenu />
           </Box>
           <Box flex="1" overflow="auto"> {/* Use flex="1" and overflow="auto" to handle page content */}
-
             <Routes>
               <Route path="/about" element={<About />} />
               <Route path="/projects" element={<Projects />} />
+              <Route path="/interests" element={<Interest />} />
+              <Route path="/blogs" element={<Blogs />} />
               <Route path="*" element={<NotFound />} />
               <Route path="/" element={<Home />} /> {/* This sets Home as the default page */}
-            </Routes>
 
+            </Routes>
           </Box>
         </Router>
       </Box>

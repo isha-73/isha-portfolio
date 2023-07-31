@@ -18,7 +18,7 @@ import {
 export default function Footer() {
   return (
     <>
-      <Box color={'white'}>
+      <Box color={'white'} p={'6'}>
         <Link
           href="http://www.linkedin.com/in/isha-bule-23a51820b"
           isExternal

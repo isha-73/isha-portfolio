@@ -1,37 +1,37 @@
 import {
   Box,
-  Button,
   Card,
   CardBody,
-  CardFooter,
-  CardHeader,
   Heading,
   SimpleGrid,
-  Text,
-  Link,
-  useMediaQuery,
+  Text
 } from '@chakra-ui/react';
+import { Link } from 'react-router-dom';
+
 
 export default function Body() {
-  const [isSmallerThan768] = useMediaQuery('(max-width: 768px)');
+  // const [isSmallerThan768] = useMediaQuery('(max-width: 768px)');
   const cardData = [
     {
       id: 1,
       title: 'Projects',
       description:
         'Showcasing a collection of my projects, combining creativity and technical expertise.',
+      link: "/projects"
     },
     {
       id: 2,
       title: 'Blogs',
       description:
         'Delve into my collection of insightful blog posts, covering various topics',
+      link: "/blogs"
     },
     {
       id: 3,
       title: 'My Interest',
       description:
         'Take a glimpse into my diverse range of interests, including hobbies, books, travel, and more.',
+      link: "/interests"
     },
   ];
 
@@ -45,15 +45,10 @@ export default function Body() {
       >
         {cardData.map((card) => (
           <Link
+            to={card.link}
             key={card.id}
-            textDecoration="none"
-            borderRadius={'6px'}
-            _hover={{
-              textDecoration: 'none',
-              boxShadow: '0 0 3px teal',
-              backgroundImage: 'linear-gradient(to bottom, #111111,#222222)',
-            }}
           >
+
             <Card
               backgroundColor="blur"
               color="white"
@@ -61,6 +56,13 @@ export default function Body() {
               borderWidth="0.5px"
               minHeight={'160px'}
               boxShadow="md"
+              textDecoration="none"
+              borderRadius={'6px'}
+              _hover={{
+                textDecoration: 'none',
+                boxShadow: '0 0 3px teal',
+                backgroundImage: 'linear-gradient(to bottom, #111111,#222222)',
+              }}
             >
               <CardBody
                 display={'flex'}
