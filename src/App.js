@@ -14,7 +14,7 @@ function App() {
     <ChakraProvider>
       <Box
         backgroundImage="linear-gradient(to bottom, #000000, #111111)"
-        height="100vh" // Set the height of the outer Box to fill the viewport
+        minHeight="100vh"
       // display="flex"
       >
         <Router>

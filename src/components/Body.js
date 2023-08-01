@@ -36,7 +36,7 @@ export default function Body() {
   ];
 
   return (
-    <Box paddingBottom={'3'} width={'70%'}>
+    <Box padding={'4'} width={'70%'}>
       <SimpleGrid
         spacing={5}
         columns={{ base: 1, sm: 2, md: 3 }}
